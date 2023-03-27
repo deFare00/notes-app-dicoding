@@ -21,3 +21,4 @@ const init = async() => {
 init();
 
 // file server untuk mengurusi logic server
+// lanjut di postman
