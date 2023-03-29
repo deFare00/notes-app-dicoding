@@ -40,5 +40,3 @@ const routes = [
 ];
 
 module.exports = routes;
-
-// routes logic
