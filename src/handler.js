@@ -100,6 +100,9 @@ const getAllBooksHandler = (request, h) => {
             books: listBook,
         },
     });
+
+    response.code(200);
+    return response;
 };
 
 const getBookByIdHandler = (request, h) => {
