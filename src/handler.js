@@ -88,16 +88,20 @@ const getAllBooksHandler = (request, h) => {
         filterBook = books.filter((book) => Number(book.finished) === Number(finished));
     }
 
-    const listBook = filterBook.map((book) => ({
-        id: book.id,
-        name: book.name,
-        publisher: book.publisher,
-    }));
+    // const listBook = filterBook.map((book) => ({
+    //     id: book.id,
+    //     name: book.name,
+    //     publisher: book.publisher,
+    // }));
 
     const response = h.response({
         status: 'success',
         data: {
-            books: listBook,
+            books: books.map((book) => ({
+                id: book.id,
+                name: book.name,
+                publisher: book.publisher,
+            })),
         },
     });
 
